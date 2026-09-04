@@ -17,15 +17,15 @@ The pipeline uses PostgreSQL as the warehouse.
 
 ## Consequences
 ### Benefits
-    - Low Cost - only engineering time is required as there are no hardware, subscription, or license costs.
-    - High performance for the scale of the data processed by the pipeline.
-    - Minimal Implementation effort.
-    - Supported integration into chosen BI Tool (Metabase) and Transformation Tool (dbt Core).
-    - Security and Data Governance.
+- Low Cost - only engineering time is required as there are no hardware, subscription, or license costs.
+- High performance for the scale of the data processed by the pipeline.
+- Minimal Implementation effort.
+- Supported integration into chosen BI Tool (Metabase) and Transformation Tool (dbt Core).
+- Security and Data Governance.
 
 ### Trade-offs
-    - Horizontal scalability is limited.
-    - The single-database implementation poses an availability risk.
+- Horizontal scalability is limited.
+- The single-database implementation poses an availability risk.
 
 ## Status
 Accepted.
