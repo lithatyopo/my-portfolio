@@ -1,0 +1,61 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "Raw UCCX historical report exports, loaded as-is by the Python EL script."
+    schema: raw
+    tables:
+      - name: agent_all_fields
+        description: "Agent All Fields table for agent related metrics"
+        columns:
+          - name: Report_Period
+          - name: Agent_ID
+          - name: Agent_Name
+          - name: Agent_Extension
+          - name: Calls_Presented
+          - name: Calls_Handled
+          - name: Calls_Abandoned
+          - name: Handle_Ratio
+          - name: Work_Time
+          - name: Avg_Handle_Time
+          - name: Avg_Talk_Time
+          - name: Not_Ready_Time
+          - name: ACD-Transfer_In
+          - name: ACD-Conference
+          - name: Ready_Time_(%)
+          - name: Not_Ready_Time_(%)
+          - name: Total_Logged_In_Time
+          - name: Outbound_On_IPCC-Total
+          - name: Talk_Time
+        
+  - name: raw
+    description: "Raw UCCX historical report exports, loaded as-is by the Python EL script."
+    schema: raw
+    tables:        
+      - name: agent_state_detail
+        description: "One row per agent state change (Ready, Not Ready, Talking, etc)."
+        columns:
+          - name: Agent_ID
+          - name: Agent_Name
+          - name: Extension
+          - name: Agent_State
+          - name: Reason
+          - name: State_Transition_Time
+          - name: Duration
+
+  - name: raw
+    description: "Raw UCCX historical report exports, loaded as-is by the Python EL script."
+    schema: raw
+    tables: 
+      - name: csq_activity
+        description: "Queue activity by month."
+        columns:
+          - name: Report_Period
+          - name: CSQ_ID
+          - name: CSQ_Name
+          - name: Calls_Presented
+          - name: Calls_Handled
+          - name: Calls_Abandoned
+          - name: Avg_Queue_Time
+          - name: Max_Queue_Time
+          - name: Avg_Speed_of_Answer

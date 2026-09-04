@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: stg_agent_all_fields
+    description: "Source Agent All Fields"
+    columns:
+      - name: agent_id
+        description: The primary key for this table
+      - name: report_period
+      - name: agent_name
+      - name: agent_extension
+      - name: calls_presented_agent,
+      - name: calls_handled_agent,
+      - name: calls_abandoned_agent,
+      - name: handle_ratio_agent,
+      - name: work_time,
+      - name: avg_handle_time,
+      - name: avg_talk_time,
+      - name: not_ready_time_hours,
+      - name: transfer_to_agent,
+      - name: conference
+      - name: ready_percent
+      - name: not_ready_percent
+      - name: logged_in_time_hours
+      - name: talk_time_hours
+      - name: outbound_calls
+
+      
+  - name: stg_agent_state_detail
+    description: "Source Agent State Detail"
+    columns:
+      - name: agent_id
+        description: The primary key for this table
+      - name: report_period
+      - name: agent_name,
+      - name: agent_extension,
+      - name: agent_state,
+      - name: state_reason,
+      - name: state_transition_time
+      - name: state_duration
+
+
+  - name: stg_csq_activity
+    description: "Source Contact Service Queue Activity" 
+    columns:
+      - name: CSQ_ID
+        description: The primary key for this table
+      - name: CSQ_Name,
+      - name: Calls_Presented,
+      - name: Calls_Handled,
+      - name: Calls_Abandoned,
+      - name: avg_queue_time,
+      - name: max_queue_time,
+      - name: avg_speed_of_answer
